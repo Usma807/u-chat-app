@@ -1,0 +1,35 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ota-ona (.chat-area) balandligini egallash */
+  background-color: #fff;
+}
+
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #f7f7f7;
+}
+
+.chat-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.messages-list {
+  flex-grow: 1; /* Qolgan joyni egallash */
+  overflow-y: auto; /* Xabarlar uchun skroll */
+  padding: 15px;
+  background-color: #e5ddd5; /* WhatsApp-ga o'xshash fon */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.2em;
+  color: #777;
+}

@@ -1,0 +1,64 @@
+.message-container {
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 70%; /* Xabar kengligini cheklash */
+}
+
+.message-container.sent {
+  justify-content: flex-end; /* O'ng tomonga tekislash */
+  align-self: flex-end; /* O'ng tomonga tekislash */
+}
+
+.message-container.received {
+  justify-content: flex-start; /* Chap tomonga tekislash */
+  align-self: flex-start; /* Chap tomonga tekislash */
+}
+
+.message-bubble {
+  padding: 8px 12px;
+  border-radius: 18px;
+  position: relative; /* Delete button uchun */
+  word-wrap: break-word; /* Uzun so'zlar sindirilsin */
+}
+
+.message-container.sent .message-bubble {
+  background-color: #dcf8c6; /* Yuborilgan xabar foni */
+  border-top-right-radius: 5px;
+}
+
+.message-container.received .message-bubble {
+  background-color: #ffffff; /* Qabul qilingan xabar foni */
+  border-top-left-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.message-text {
+  margin: 0;
+  margin-bottom: 3px; /* Vaqt bilan orasini ochish */
+  font-size: 0.95em;
+}
+
+.message-timestamp {
+  font-size: 0.7em;
+  color: #888;
+  text-align: right; /* Vaqtni o'ngga surish */
+  display: block; /* O'z qatorida turishi uchun */
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0 5px;
+  opacity: 0; /* Sichqoncha ustiga kelganda ko'rinadi */
+  transition: opacity 0.2s;
+  position: absolute; /* Xabarga nisbatan pozitsiya */
+  top: 2px;
+  right: 2px;
+}
+
+.message-bubble:hover .delete-button {
+  opacity: 1;
+}

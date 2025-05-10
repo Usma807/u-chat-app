@@ -1,0 +1,53 @@
+.chat-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat-main-content {
+  display: flex;
+  flex-grow: 1; /* Navbar dan qolgan joyni egallaydi */
+  overflow: hidden; /* Ichki elementlar scroll bo'lishi uchun */
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.chat-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.no-chat-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Moslashuvchanlik uchun misol */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Kichik ekranlarda to'liq kenglik */
+    height: 40vh; /* Va ma'lum bir balandlik */
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .chat-main-content {
+    flex-direction: column;
+  }
+  .chat-area {
+    height: 60vh;
+  }
+}
